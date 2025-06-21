@@ -18,3 +18,6 @@ def login():
     user = request.form['user']
     password = request.form['pass']
     return f"<h3>Hola, {user}. Tus datos fueron enviados. (sin validar)</h3>"
+if __name__ == "__main__":
+    from os import environ
+    app.run(host="0.0.0.0", port=int(environ.get("PORT", 5000)))
